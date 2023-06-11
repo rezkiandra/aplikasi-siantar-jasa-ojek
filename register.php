@@ -1,7 +1,7 @@
 <?php
 require_once "./bin/config.php";
 
-$page           = "login";
+$page           = "register";
 $error          = "";
 $success        = "";
 
@@ -14,7 +14,7 @@ $success        = "";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RentalAldy | Login</title>
+    <title>RentalAldy | Daftar</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
@@ -28,7 +28,7 @@ $success        = "";
                 <div class="featured-image mb-3">
                     <img src="../assets//img//poltesa-logo.png" class="img-fluid" style="width: 120px;">
                 </div>
-                <p class="text-white fs-2 text-uppercase" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">Login Akun</p>
+                <p class="text-white fs-2 text-uppercase" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">Register Akun</p>
                 <!-- <p class="text-white text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">Website Kerjasama Politeknik Negeri Sambas</p> -->
             </div>
             <div class="col-md-6 right-box">
@@ -65,15 +65,15 @@ $success        = "";
                         </div>
                         <div class="mb-5 d-flex justify-content-between">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="formCheck">
-                                <label for="formCheck" class="form-check-label text-secondary"><small>Ingat saya</small></label>
+                                <!-- <input type="checkbox" class="form-check-input" id="formCheck">
+                                <label for="formCheck" class="form-check-label text-secondary"><small>Ingat saya</small></label> -->
                             </div>
                             <div class="forgot">
-                                <small>Tidak memiliki akun? <a href="../rentalmobil/register">Register</a></small>
+                                <small>Sudah memiliki akun? <a href="../rentalmobil/login">Login</a></small>
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="submit" value="Login" name="login" class="btn btn-lg btn-dark fs-6 col-lg-12 col-12">
+                            <input type="submit" value="Register" name="daftar" class="btn btn-lg btn-dark fs-6 col-lg-12 col-12">
                         </div>
                     </form>
                 </div>
