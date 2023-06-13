@@ -9,7 +9,7 @@ require_once "./bin/config.php";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIANTAR | Beranda</title>
+    <title><?php echo $title ?>Beranda</title>
 </head>
 
 <body>

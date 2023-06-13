@@ -32,17 +32,17 @@ require_once "./bin/config.php";
                 <ul class="navbar-nav gap-3">
                     <li class="nav-item">
                         <?php
-                        $badge  = 0;
+                        $badge  = 2;
                         if ($badge >= 1) {
                         ?>
-                            <a class="nav-link active" href="#" aria-current="page"><i class="bi bi-cart me-2"></i>Keranjang
+                            <a class="nav-link active" href="../../rentalmobil/keranjang" aria-current="page"><i class="bi bi-cart me-2"></i>Keranjang
                                 <span class="ms-2 translate-middle badge rounded-pill bg-danger"><?php echo $badge ?></span>
                                 <span class="visually-hidden"></span>
                             </a>
                         <?php
                         } else {
                         ?>
-                            <a class="nav-link active" href="#" aria-current="page"><i class="bi bi-cart me-2"></i>Keranjang
+                            <a class="nav-link active" href="../../rentalmobil/keranjang" aria-current="page"><i class="bi bi-cart me-2"></i>Keranjang
                                 <span class="ms-2 translate-middle badge rounded-pill bg-danger"></span>
                                 <span class="visually-hidden"></span>
                             </a>
@@ -51,9 +51,9 @@ require_once "./bin/config.php";
                         ?>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-current="page"><i class="bi bi-people me-2"></i>Akun<span class="visually-hidden"></span></a>
+                        <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" aria-current="page"><i class="bi bi-people me-2"></i>Akun<span class="visually-hidden"></span></a>
                         <ul class="dropdown-menu bg-outline-dark">
-                            <li><a class="btn btn-sm dropdown-item text-dark" href="#">Logout</a></li>
+                            <li><a class="btn btn-sm dropdown-item text-dark" href="../../rentalmobil/">Logout</a></li>
                         </ul>
                     </li>
                 </ul>

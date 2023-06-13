@@ -27,16 +27,16 @@ require_once "./bin/config.php";
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../../rentalmobil/pelanggan" class="<?php if ($page == "pelanggan") {
                                                                                             echo "text-dark text-decoration-none";
-                                                                                        } ?>">Data Pelanggan</a></li>
-            <li class="breadcrumb-item"><a href="../../rentalmobil/mobil" class="<?php if ($page == "mobil") {
+                                                                                        } ?>"><i class="bi bi-people-fill me-2"></i>Pelanggan</a></li>
+            <li class="breadcrumb-item"><a href="../../rentalmobil/tujuan" class="<?php if ($page == "tujuan") {
                                                                                         echo "text-dark text-decoration-none";
-                                                                                    } ?>">Kendaraan</a></li>
+                                                                                    } ?>"><i class="bi bi-car-front-fill me-2"></i>Tujuan</a></li>
             <li class="breadcrumb-item"><a href="../../rentalmobil/pembayaran" class="<?php if ($page == "pembayaran") {
                                                                                             echo "text-dark text-decoration-none";
-                                                                                        } ?>">Pembayaran</a></li>
+                                                                                        } ?>"><i class="bi bi-wallet-fill me-2"></i>Pembayaran</a></li>
             <li class="breadcrumb-item"><a href="../../rentalmobil/status" class="<?php if ($page == "status") {
                                                                                         echo "text-dark text-decoration-none";
-                                                                                    } ?>">Status Pembayaran</a></li>
+                                                                                    } ?>"><i class="bi bi-clipboard-check-fill me-2"></i>Status</a></li>
         </ol>
         </ol>
     </nav>

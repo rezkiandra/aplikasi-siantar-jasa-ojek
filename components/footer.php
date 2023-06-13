@@ -12,9 +12,13 @@ require_once "./bin/config.php";
 </head>
 
 <body>
-    <nav class="bg-dark w-100 bottom-0 position-relative">
-        <div class="container d-lg-flex justify-content-center">
-            <div class="col-lg-6 d-lg-flex justify-content-start py-5">
+    <nav class="bg-dark w-100 bottom-0 left-0 right-0 <?php if ($page == "tujuan") {
+                                                            echo "position-relative";
+                                                        } else {
+                                                            echo "position-relative";
+                                                        } ?>">
+        <div class="container d-lg-flex justify-content-center py-5">
+            <div class="col-lg-6 d-lg-flex justify-content-start">
                 <ul>
                     <li class="nav-item my-3">
                         <a class="nav-link text-light"><i class="bi bi-buildings me-2"></i>Jalan Ahmad Sood, Sambas 79462</a>
@@ -27,7 +31,7 @@ require_once "./bin/config.php";
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-6 d-lg-flex justify-content-end py-5">
+            <div class="col-lg-6 d-lg-flex justify-content-end">
                 <ul>
                     <li class="nav-item my-3">
                         <a href="" class="nav-link text-light"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
