@@ -17,17 +17,34 @@ require_once "./bin/config.php";
     <?php include_once "./components/header.php" ?>
     <!-- end header -->
 
-    <div id="profile" class="py-5 mb-4">
+    <div class="py-5 mb-4">
         <div class="container d-lg-flex flex-row justify-content-center align-items-center">
             <div class="col-lg-6 py-3">
                 <div class="container d-flex flex-column justify-content-center">
                     <h1 class="text-capitalize mb-3">Sistem Jasa Antar</h1>
                     <h3 class="mb-3">Mobilitas tanpa batas, pengalaman tanpa hambatan</h3>
-                    <div class="btn col-5 btn-sm col-lg-4 shadow btn-secondary fs-6">Selengkapnya</div>
+
+                    <!-- Toast -->
+                    <button type="button" class="btn col-5 btn-sm col-lg-4 shadow btn-secondary fs-6" id="liveToastBtn">Selengkapnya</button>
+                    <div class="toast-container position-fixed bottom-0 end-0 p-3 toast-lg">
+                        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <img src="./assets/img/poltesa-logo.png" class="rounded me-2" style="width: 50px;">
+                                <strong class="me-auto"><?php echo $toastTitle ?></strong>
+                                <small>Sekarang</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                Halo Pelanggan, Silahkan login terlebih dahulu yaa!
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End -->
+
                 </div>
             </div>
             <div class="col-lg-6 py-3">
-                <img src="./img/mobil1.jpg" alt="" class="img-fluid">
+                <img src="./assets/img/mobil1.jpg" alt="" class="img-fluid">
             </div>
         </div>
     </div>
@@ -49,11 +66,22 @@ require_once "./bin/config.php";
                 <div class="col-lg-3 text-center my-5">
                     <i class="fs-1 bi bi-arrows-move"></i>
                     <h5 class="text-center mt-3">Fleksibilitas</h5>
-                    <p class="mt-3"> Layanan yang terpercaya akan menawarkan fleksibilitas dalam penyewaan.</p>
+                    <p class="mt-3">Layanan yang terpercaya akan menawarkan fleksibilitas dalam penyewaan.</p>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script>
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+
+    if (toastTrigger) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastTrigger.addEventListener('click', () => {
+            toastBootstrap.show()
+        })
+    }
+</script>
 
 </html>

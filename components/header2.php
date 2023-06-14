@@ -14,7 +14,7 @@ require_once "./bin/config.php";
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./assets/css/sidebar.css">
 
     <!-- BS Icons -->
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
@@ -51,9 +51,9 @@ require_once "./bin/config.php";
                         ?>
                     </li> -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" aria-current="page"><i class="bi bi-people me-2"></i>Akun<span class="visually-hidden"></span></a>
+                        <a class="nav-link active dropdown-toggle text-uppercase" data-bs-toggle="dropdown" aria-current="page"><i class="bi bi-people me-2"></i>Akun<span class="visually-hidden"></span></a>
                         <ul class="dropdown-menu bg-outline-dark">
-                            <li><a class="btn btn-sm dropdown-item text-dark" href="../../rentalmobil/">Logout</a></li>
+                            <li><a class="btn btn-sm dropdown-item text-dark text-uppercase" href="../../rentalmobil/">Logout</a></li>
                         </ul>
                     </li>
                 </ul>

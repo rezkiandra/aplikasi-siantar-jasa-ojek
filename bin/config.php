@@ -6,4 +6,5 @@ $pwd            = "";
 $db             = "rentalmobil";
 $connection = mysqli_connect($localhost, $user, $pwd, $db);
 
-$title          = "SIANTAR | ";
+$title                  = "SIANTAR | ";
+$toastTitle             = "SIANTAR";

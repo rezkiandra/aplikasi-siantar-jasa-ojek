@@ -18,7 +18,7 @@ $success        = "";
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body class="bg-light">
@@ -26,10 +26,12 @@ $success        = "";
         <div class="row border rounded-5 p-3 bg-white shadow box-area">
             <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box bg-dark">
                 <div class="featured-image mb-3">
-                    <img src="./img/poltesa-logo.png" class="img-fluid" style="width: 120px;">
+                    <a href="./">
+                        <img src="./assets/img/poltesa-logo.png" class="img-fluid" style="width: 120px;">
+                    </a>
                 </div>
-                <p class="text-white fs-2 text-uppercase" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">Login Akun</p>
-                <!-- <p class="text-white text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">Website Kerjasama Politeknik Negeri Sambas</p> -->
+                <p class="text-white fs-2 text-uppercase fw-bold">Login Akun</p>
+                <p class="text-white text-wrap text-center">Sistem Jasa Antar (SIANTAR)</p>
             </div>
             <div class="col-md-6 right-box">
                 <div class="row align-items-center">
