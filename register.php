@@ -1,9 +1,10 @@
 <?php
 require_once "./bin/config.php";
+require_once "./bin/register.php";
 
 $page           = "register";
-$error          = "";
 $success        = "";
+$error          = "";
 
 ?>
 
@@ -37,7 +38,7 @@ $success        = "";
                 <div class="row align-items-center">
                     <div class="header-text mb-4">
                         <h2>Selamat Datang, Pelanggan</h2>
-                        <p>Masukkan username dan password yang sesuai</p>
+                        <p>Daftarkan username dan password anda</p>
                         <?php
                         if ($success) {
                         ?>
@@ -45,14 +46,7 @@ $success        = "";
                                 <?php echo $success ?>
                             </div>
                         <?php
-                            header("refresh:2; url=auth");
-                        } elseif ($error) {
-                        ?>
-                            <div class="alert alert-danger" role="alert">
-                                <?php echo $error ?>
-                            </div>
-                        <?php
-                            header("refresh:2; url=auth");
+                            header("refresh:2; url=login");
                         }
                         ?>
                     </div>
@@ -75,7 +69,7 @@ $success        = "";
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="submit" value="Register" name="daftar" class="btn btn-lg btn-dark fs-6 col-lg-12 col-12">
+                            <input type="submit" value="Register" name="register" class="btn btn-lg btn-dark fs-6 col-lg-12 col-12">
                         </div>
                     </form>
                 </div>

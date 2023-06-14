@@ -31,69 +31,41 @@ $page       = "tujuan";
     <?php include_once "./components/header2.php" ?>
     <!-- end header -->
 
-    <div class="container my-5">
-
-        <!-- start breadcumb -->
+    <div class="container my-5 min-vh-60">
         <?php include_once "./components/breadcump.php" ?>
-        <!-- end breadcumb -->
-
         <h4 class="mt-5 mb-3">Silahkan lengkapi alamat tujuan pelanggan <span class="text-danger fw-bold">*</span></h4>
-        <div class="col-lg-8 mb-3">
-            <label for="inputAddress" class="form-label">Alamat Tujuan <span class="text-danger fw-bold">*</span></label>
-            <input type="text" class="form-control" id="inputAddress">
+        <div class="col-lg-6 mb-3">
+            <label for="inputCity" class="form-label">Kota Asal <span class="text-danger fw-bold">*</span></label>
+            <input type="text" class="form-control" id="inputCity" required>
         </div>
-        <div class="col-lg-8 mb-3">
+        <div class="col-lg-6 mb-3">
             <label for="inputCity" class="form-label">Kota Tujuan <span class="text-danger fw-bold">*</span></label>
             <input type="text" class="form-control" id="inputCity" required>
         </div>
         <div class="row">
-            <div class="col-lg-4 mb-3">
-                <label for="inputState" class="form-label">Kabupaten <span class="text-danger fw-bold">*</span></label>
-                <select id="inputState" class="form-select" required>
-                    <option selected>-- Pilih Kabupaten</option>
-                    <option>...</option>
-                </select>
+            <div class="col-lg-3 mb-3">
+                <label for="inputCity" class="form-label">Jarak Tempuh <span class="text-danger fw-bold">*</span></label>
+                <input type="text" class="form-control" id="inputCity" required>
             </div>
-            <div class="col-lg-4 mb-3">
-                <label for="inputState" class="form-label">Kecamatan <span class="text-danger fw-bold">*</span></label>
-                <select id="inputState" class="form-select" required>
-                    <option selected>-- Pilih Kecamatan</option>
-                    <option>...</option>
-                </select>
+            <div class="col-lg-3 mb-3">
+                <label for="inputCity" class="form-label">Harga Tarif <span class="text-danger fw-bold">*</span></label>
+                <input type="text" class="form-control" id="inputCity" required>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4 mb-3">
-                <label for="inputZip" class="form-label">Dusun <span class="text-danger fw-bold">*</span></label>
-                <select id="inputState" class="form-select" required>
-                    <option selected>-- Pilih Dusun</option>
-                    <option>...</option>
-                </select>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <label for="inputZip" class="form-label">Desa <span class="text-danger fw-bold">*</span></label>
-                <select id="inputState" class="form-select" required>
-                    <option selected>-- Pilih Desa</option>
-                    <option>...</option>
-                </select>
-            </div>
+        <div class="col-lg-6 mb-3">
+            <label for="inputZip" class="form-label">Hari Keberangkatan <span class="text-danger fw-bold">*</span></label>
+            <select id="jenkel" name="jenkel" class="form-select" required>
+                <option selected disabled value="">- Pilih Hari</option>
+                <option value="Laki-laki" <?php if ($jenkel == "Laki-laki") echo "selected" ?>>Laki-laki</option>
+                <option value="Perempuan" <?php if ($jenkel == "Perempuan") echo "selected" ?>>Perempuan</option>
+            </select>
         </div>
-        <div class="col-lg-8 mb-3">
-            <label for="inputZip" class="form-label">Kode Pos <span class="text-danger fw-bold">*</span></label>
-            <input type="text" class="form-control" id="inputZip" required>
-        </div>  
-        <div class="row">
-            <div class="col-lg-4 mb-3">
-                <label for="inputZip" class="form-label">Hari Keberangkatan <span class="text-danger fw-bold">*</span></label>
-                <input type="text" class="form-control" id="inputZip" required>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <label for="inputZip" class="form-label">Jam Keberangkatan <span class="text-danger fw-bold">*</span></label>
-                <input type="time" class="form-control" id="inputZip" required>
-            </div>
+        <div class="col-lg-6 mb-3">
+            <label for="inputZip" class="form-label">Jam Keberangkatan <span class="text-danger fw-bold">*</span></label>
+            <input type="time" class="form-control" id="inputZip" required>
         </div>
-        <div class="mb-3">
-            <input type="submit" value="Simpan" class="btn btn-success col-lg-8 col-12 text-uppercase">
+        <div class="col-lg-6 mb-3">
+            <input type="submit" value="Simpan" class="btn btn-success col-lg-12 col-12 text-uppercase">
         </div>
     </div>
 

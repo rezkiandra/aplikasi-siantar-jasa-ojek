@@ -19,7 +19,7 @@ $page       = "pembayaran";
     <?php include_once "./components/header2.php" ?>
     <!-- end header -->
 
-    <div class="container my-5">
+    <div class="container my-5 min-vh-60">
 
         <!-- start breadcumb -->
         <?php include_once "./components/breadcump.php" ?>
@@ -30,17 +30,25 @@ $page       = "pembayaran";
             <label for="inputEmail4" class="form-label">Nama Lengkap Pelanggan <span class="text-danger fw-bold">*</span></label>
             <input type="text" class="form-control" id="inputEmail4" required>
         </div>
-        <div class="col-lg-8 mb-3">
-            <label for="inputAddress" class="form-label">Alamat Pelanggan <span class="text-danger fw-bold">*</span></label>
-            <input type="text" class="form-control" id="inputAddress">
+        <div class="row">
+            <div class="col-lg-4 mb-3">
+                <label for="inputAddress" class="form-label">Kota Asal <span class="text-danger fw-bold">*</span></label>
+                <input type="text" class="form-control" id="inputAddress">
+            </div>
+            <div class="col-lg-4 mb-3">
+                <label for="inputAddress" class="form-label">Kota Tujuan <span class="text-danger fw-bold">*</span></label>
+                <input type="text" class="form-control" id="inputAddress">
+            </div>
         </div>
-        <div class="col-lg-8 mb-3">
-            <label for="inputAddress" class="form-label">Alamat Tujuan <span class="text-danger fw-bold">*</span></label>
-            <input type="text" class="form-control" id="inputAddress">
-        </div>
-        <div class="col-lg-8 mb-3">
-            <label for="inputCity" class="form-label">Nomor HP <span class="text-danger fw-bold">*</span></label>
-            <input type="text" class="form-control" id="inputCity" required>
+        <div class="row">
+            <div class="col-lg-4 mb-3">
+                <label for="inputCity" class="form-label">Jarak Tempuh <span class="text-danger fw-bold">*</span></label>
+                <input type="text" class="form-control" id="inputCity" required>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <label for="inputCity" class="form-label">Harga Tarif <span class="text-danger fw-bold">*</span></label>
+                <input type="text" class="form-control" id="inputCity" required>
+            </div>
         </div>
         <div class="row">
             <div class="col-lg-4 mb-3">
