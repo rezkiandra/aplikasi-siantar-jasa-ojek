@@ -26,7 +26,7 @@ $success        = "";
         <div class="row border rounded-5 p-3 bg-white shadow box-area">
             <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box bg-dark">
                 <div class="featured-image mb-3">
-                    <img src="../assets//img//poltesa-logo.png" class="img-fluid" style="width: 120px;">
+                    <img src="./img/poltesa-logo.png" class="img-fluid" style="width: 120px;">
                 </div>
                 <p class="text-white fs-2 text-uppercase" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">Login Akun</p>
                 <!-- <p class="text-white text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">Website Kerjasama Politeknik Negeri Sambas</p> -->

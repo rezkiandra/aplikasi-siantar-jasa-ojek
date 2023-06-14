@@ -31,135 +31,69 @@ $page       = "tujuan";
     <?php include_once "./components/header2.php" ?>
     <!-- end header -->
 
-    <div class="container mt-5 mb-3 min-vh-100">
+    <div class="container my-5">
 
         <!-- start breadcumb -->
         <?php include_once "./components/breadcump.php" ?>
         <!-- end breadcumb -->
 
-        <div class="accordion my-5" id="accordionPanelsStayOpenExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        <h6>Form Tujuan Pelanggan <span class="text-danger fw-bold">*</span></h6>
-                    </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionPanelsStayOpenExample">
-                    <div class="accordion-body">
-                        <form class="row">
-                            <div class="col-lg-6 mb-3">
-                                <label for="inputAddress" class="form-label">Alamat Tujuan <span class="text-danger fw-bold">*</span></label>
-                                <input type="text" class="form-control" id="inputAddress">
-                            </div>
-                            <div class="col-lg-6 mb-3">
-                                <label for="inputCity" class="form-label">Kota Tujuan <span class="text-danger fw-bold">*</span></label>
-                                <input type="text" class="form-control" id="inputCity" required>
-                            </div>
-                            <div class="col-lg-6 mb-3">
-                                <label for="inputState" class="form-label">Kabupaten <span class="text-danger fw-bold">*</span></label>
-                                <select id="inputState" class="form-select" required>
-                                    <option selected>-- Pilih Kabupaten</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-6 mb-3">
-                                <label for="inputState" class="form-label">Kecamatan <span class="text-danger fw-bold">*</span></label>
-                                <select id="inputState" class="form-select" required>
-                                    <option selected>-- Pilih Kecamatan</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-4 mb-3">
-                                <label for="inputZip" class="form-label">Dusun <span class="text-danger fw-bold">*</span></label>
-                                <select id="inputState" class="form-select" required>
-                                    <option selected>-- Pilih Dusun</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-4 mb-3">
-                                <label for="inputZip" class="form-label">Desa <span class="text-danger fw-bold">*</span></label>
-                                <select id="inputState" class="form-select" required>
-                                    <option selected>-- Pilih Desa</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-4 mb-3">
-                                <label for="inputZip" class="form-label">Kode Pos <span class="text-danger fw-bold">*</span></label>
-                                <input type="text" class="form-control" id="inputZip" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="submit" value="Konfirmasi Pelanggan" class="btn btn-success col-lg-12 col-12">
-                            </div>
-                        </form>
-                    </div>
-                </div>
+        <h4 class="mt-5 mb-3">Silahkan lengkapi alamat tujuan pelanggan <span class="text-danger fw-bold">*</span></h4>
+        <div class="col-lg-8 mb-3">
+            <label for="inputAddress" class="form-label">Alamat Tujuan <span class="text-danger fw-bold">*</span></label>
+            <input type="text" class="form-control" id="inputAddress">
+        </div>
+        <div class="col-lg-8 mb-3">
+            <label for="inputCity" class="form-label">Kota Tujuan <span class="text-danger fw-bold">*</span></label>
+            <input type="text" class="form-control" id="inputCity" required>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 mb-3">
+                <label for="inputState" class="form-label">Kabupaten <span class="text-danger fw-bold">*</span></label>
+                <select id="inputState" class="form-select" required>
+                    <option selected>-- Pilih Kabupaten</option>
+                    <option>...</option>
+                </select>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        <h6>Form Tujuan Antar Barang (jika ada)</h6>
-                    </button>
-                </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionPanelsStayOpenExample">
-                    <div class="accordion-body">
-                        <form class="row">
-                            <div class="col-lg-6 mb-3">
-                                <label for="inputAddress" class="form-label">Nama Penerima<span class="text-danger fw-bold">*</span></label>
-                                <input type="text" class="form-control" id="inputAddress">
-                            </div>
-                            <div class="col-lg-6 mb-3">
-                                <label for="inputAddress" class="form-label">Nama Barang<span class="text-danger fw-bold">*</span></label>
-                                <input type="text" class="form-control" id="inputAddress">
-                            </div>
-                            <div class="col-lg-6 mb-3">
-                                <label for="inputAddress" class="form-label">Jumlah Barang<span class="text-danger fw-bold">*</span></label>
-                                <input type="text" class="form-control" id="inputAddress">
-                            </div>
-                            <div class="col-lg-6 mb-3">
-                                <label for="inputAddress" class="form-label">Alamat Tujuan <span class="text-danger fw-bold">*</span></label>
-                                <input type="text" class="form-control" id="inputAddress">
-                            </div>
-                            <div class="col-lg-6 mb-3">
-                                <label for="inputAddress" class="form-label">Nomor HP <span class="text-danger fw-bold">*</span></label>
-                                <input type="text" class="form-control" id="inputAddress">
-                            </div>
-                            <div class="col-lg-6 mb-3">
-                                <label for="inputCity" class="form-label">Kota Tujuan <span class="text-danger fw-bold">*</span></label>
-                                <input type="text" class="form-control" id="inputCity" required>
-                            </div>
-                            <div class="col-lg-6 mb-3">
-                                <label for="inputState" class="form-label">Kabupaten <span class="text-danger fw-bold">*</span></label>
-                                <select id="inputState" class="form-select" required>
-                                    <option selected>-- Pilih Kabupaten</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-6 mb-3">
-                                <label for="inputState" class="form-label">Kecamatan <span class="text-danger fw-bold">*</span></label>
-                                <select id="inputState" class="form-select" required>
-                                    <option selected>-- Pilih Kecamatan</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-4 mb-3">
-                                <label for="inputZip" class="form-label">Dusun <span class="text-danger fw-bold">*</span></label>
-                                <input type="text" class="form-control" id="inputZip" required>
-                            </div>
-                            <div class="col-lg-4 mb-3">
-                                <label for="inputZip" class="form-label">Desa <span class="text-danger fw-bold">*</span></label>
-                                <input type="text" class="form-control" id="inputZip" required>
-                            </div>
-                            <div class="col-lg-4 mb-3">
-                                <label for="inputZip" class="form-label">Kode Pos <span class="text-danger fw-bold">*</span></label>
-                                <input type="text" class="form-control" id="inputZip" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="submit" value="Konfirmasi Barang" class="btn btn-success col-lg-12 col-12">
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div class="col-lg-4 mb-3">
+                <label for="inputState" class="form-label">Kecamatan <span class="text-danger fw-bold">*</span></label>
+                <select id="inputState" class="form-select" required>
+                    <option selected>-- Pilih Kecamatan</option>
+                    <option>...</option>
+                </select>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 mb-3">
+                <label for="inputZip" class="form-label">Dusun <span class="text-danger fw-bold">*</span></label>
+                <select id="inputState" class="form-select" required>
+                    <option selected>-- Pilih Dusun</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <label for="inputZip" class="form-label">Desa <span class="text-danger fw-bold">*</span></label>
+                <select id="inputState" class="form-select" required>
+                    <option selected>-- Pilih Desa</option>
+                    <option>...</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-8 mb-3">
+            <label for="inputZip" class="form-label">Kode Pos <span class="text-danger fw-bold">*</span></label>
+            <input type="text" class="form-control" id="inputZip" required>
+        </div>  
+        <div class="row">
+            <div class="col-lg-4 mb-3">
+                <label for="inputZip" class="form-label">Hari Keberangkatan <span class="text-danger fw-bold">*</span></label>
+                <input type="text" class="form-control" id="inputZip" required>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <label for="inputZip" class="form-label">Jam Keberangkatan <span class="text-danger fw-bold">*</span></label>
+                <input type="time" class="form-control" id="inputZip" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Simpan" class="btn btn-success col-lg-8 col-12 text-uppercase">
         </div>
     </div>
 

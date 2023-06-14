@@ -23,7 +23,7 @@ require_once "./bin/config.php";
                 <div class="container d-flex flex-column justify-content-center">
                     <h1 class="text-capitalize mb-3">Sistem Jasa Antar</h1>
                     <h3 class="mb-3">Mobilitas tanpa batas, pengalaman tanpa hambatan</h3>
-                    <div class="btn col-5 col-lg-3 btn-secondary">Selengkapnya</div>
+                    <div class="btn col-5 btn-sm col-lg-4 shadow btn-secondary fs-6">Selengkapnya</div>
                 </div>
             </div>
             <div class="col-lg-6 py-3">

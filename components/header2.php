@@ -30,7 +30,7 @@ require_once "./bin/config.php";
             </button>
             <div class="d-lg-flex justify-content-end align-items-centercollapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav gap-3">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <?php
                         $badge  = 2;
                         if ($badge >= 1) {
@@ -49,7 +49,7 @@ require_once "./bin/config.php";
                         <?php
                         }
                         ?>
-                    </li>
+                    </li> -->
                     <li class="nav-item dropdown">
                         <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" aria-current="page"><i class="bi bi-people me-2"></i>Akun<span class="visually-hidden"></span></a>
                         <ul class="dropdown-menu bg-outline-dark">

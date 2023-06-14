@@ -19,9 +19,9 @@ require_once "./bin/config.php"
 
     <div class="container mt-5 mb-3 min-vh-100">
 
-    <!-- start breadcumbs -->
-    <?php echo include_once "./components/breadcump.php" ?>
-    <!-- end breadcumbs -->
+        <!-- start breadcumbs -->
+        <?php echo include_once "./components/breadcump.php" ?>
+        <!-- end breadcumbs -->
 
     </div>
 </body>

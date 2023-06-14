@@ -24,10 +24,10 @@ require_once "./bin/config.php";
                         <a class="nav-link text-light"><i class="bi bi-buildings me-2"></i>Jalan Ahmad Sood, Sambas 79462</a>
                     </li>
                     <li class="nav-item my-3">
-                        <a class="nav-link text-light"><i class="bi bi-telephone me-2"></i>+62 (821) - 654029</a>
+                        <a class="nav-link text-light"><i class="bi bi-telephone me-2"></i>+62 (896) - 93890856</a>
                     </li>
                     <li class="nav-item my-3">
-                        <a class="nav-link text-light"><i class="bi bi-dropbox me-2"></i>siantaraldy@business.com</a>
+                        <a class="nav-link text-light"><i class="bi bi-dropbox me-2"></i>siantar@business.com</a>
                     </li>
                 </ul>
             </div>
