@@ -41,7 +41,7 @@ if (isset($_GET['setPelanggan'])) {
     <div class="container my-5 min-vh-60">
         <?php include_once "./components/breadcump.php" ?>
         <h4 class="mt-5 mb-3">Silahkan lengkapi alamat tujuan pelanggan <span class="text-danger fw-bold">*</span></h4>
-        <div class="col-lg-6 mb-3">
+        <div class="col-lg-6 mb-3">d
             <label for="inputCity" class="form-label">Kota Asal <span class="text-danger fw-bold">*</span></label>
             <input type="text" class="form-control" id="inputCity" required value="<?php echo $kota_asal ?>">
         </div>

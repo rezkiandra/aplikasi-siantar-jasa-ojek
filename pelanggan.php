@@ -36,12 +36,12 @@ $page       = "pelanggan";
                     <label for="nama_depan" class="form-label">Nama Depan <span class="text-danger fw-bold">*</span></label>
                     <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-fingerprint"></i></span>
-                        <input type="text" name="nama_depan" class="form-control" id="nama_depan" required autocomplete="off" autofocus autocapitalize="true">
+                        <input type="text" name="nama_depan" class="form-control text-uppercase" id="nama_depan" required autocomplete="off" autofocus placeholder="Masukkan Nama Depan">
                     </div>
                 </div>
                 <div class="col-lg-6 mb-3">
                     <label for="nama_belakang" class="form-label">Nama Belakang</label>
-                    <input type="text" name="nama_belakang" class="form-control" id="nama_belakang" autocomplete="off" placeholder="Ackerman" required>
+                    <input type="text" name="nama_belakang" class="form-control text-uppercase" id="nama_belakang" autocomplete="off" required placeholder="Masukkan Nama Belakang">
                 </div>
             </div>
             <div class="col-lg-6 mb-3">
@@ -49,19 +49,25 @@ $page       = "pelanggan";
                 <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-gender-ambiguous"></i></span>
                     <select id="jenkel" name="jenkel" class="form-select" required>
-                        <option selected disabled value="">Pilih Jenis Kelamin</option>
-                        <option value="Laki-laki" <?php if ($jenkel == "Laki-laki") echo "selected" ?>>Laki-laki</option>
-                        <option value="Perempuan" <?php if ($jenkel == "Perempuan") echo "selected" ?>>Perempuan</option>
+                        <option selected disabled class="text-uppercase">PILIH JENIS KELAMIN</option>
+                        <option value="LAKI-LAKI" <?php if ($jenkel == "LAKI-LAKI") echo "selected" ?>>LAKI-LAKI</option>
+                        <option value="PEREMPUAN" <?php if ($jenkel == "PEREMPUAN") echo "selected" ?>>PEREMPUAN</option>
                     </select>
                 </div>
             </div>
             <div class="col-lg-6 mb-3">
                 <label for="kota_asal" class="form-label">Kota Asal<span class="text-danger fw-bold">*</span></label>
-                <input type="text" name="kota_asal" class="form-control" id="kota_asal" placeholder="" autocomplete="off" required>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+                    <input type="text" name="kota_asal" class="form-control text-uppercase" id="kota_asal" placeholder="Masukkan Kota" autocomplete="off" required>
+                </div>
             </div>
             <div class="col-lg-6 mb-3">
                 <label for="nomor_hp" class="form-label">Nomor HP <span class="text-danger fw-bold">*</span></label>
-                <input type="text" name="nomor_hp" class="form-control" id="nomor_hp" required autocomplete="off" placeholder="082185940394" required>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-phone"></i></span>
+                    <input type="tel" name="nomor_hp" class="form-control" id="nomor_hp" required autocomplete="off" placeholder="082154330578">
+                </div>
             </div>
             <div class="col-lg-6 mb-3">
                 <button type="submit" name="setPelanggan" class="btn col-lg-12 col-12 text-uppercase btn-success">Simpan</button>
