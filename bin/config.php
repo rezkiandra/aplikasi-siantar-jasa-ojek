@@ -3,7 +3,7 @@
 $localhost      = "localhost";
 $user           = "root";
 $pwd            = "";
-$db             = "rentalmobil";
+$db             = "siantar";
 $connection = mysqli_connect($localhost, $user, $pwd, $db);
 
 $me                     = "";

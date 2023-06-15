@@ -26,16 +26,16 @@ require_once "./bin/config.php";
     <!-- breadcumb -->
     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../../rentalmobil/pelanggan" class="text-uppercase <?php if ($page == "pelanggan") {
+            <li class="breadcrumb-item"><a href="./pelanggan" class="text-uppercase <?php if ($page == "pelanggan") {
                                                                                                         echo "text-dark text-decoration-none";
                                                                                                     } ?>"><i class="bi bi-people-fill me-2"></i>Pelanggan</a></li>
-            <li class="breadcrumb-item"><a href="../../rentalmobil/tujuan" class="text-uppercase <?php if ($page == "tujuan") {
+            <li class="breadcrumb-item"><a href="./tujuan" class="text-uppercase <?php if ($page == "tujuan") {
                                                                                                         echo "text-dark text-decoration-none";
                                                                                                     } ?>"><i class="bi bi-car-front-fill me-2"></i>Tujuan</a></li>
-            <li class="breadcrumb-item"><a href="../../rentalmobil/pembayaran" class="text-uppercase <?php if ($page == "pembayaran") {
+            <li class="breadcrumb-item"><a href="./pembayaran" class="text-uppercase <?php if ($page == "pembayaran") {
                                                                                                             echo "text-dark text-decoration-none";
                                                                                                         } ?>"><i class="bi bi-wallet-fill me-2"></i>Pembayaran</a></li>
-            <li class="breadcrumb-item"><a href="../../rentalmobil/status" class="text-uppercase <?php if ($page == "status") {
+            <li class="breadcrumb-item"><a href="./status" class="text-uppercase <?php if ($page == "status") {
                                                                                                         echo "text-dark text-decoration-none";
                                                                                                     } ?>"><i class="bi bi-clipboard-check-fill me-2"></i>Status</a></li>
         </ol>

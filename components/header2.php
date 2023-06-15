@@ -25,7 +25,7 @@ require_once "./bin/config.php";
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="../rentalmobil/pelanggan">SIANTAR</a>
+            <a class="navbar-brand" href="./pelanggan">SIANTAR</a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

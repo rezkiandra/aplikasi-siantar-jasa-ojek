@@ -26,17 +26,17 @@ require_once "./bin/config.php";
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary shadow-sm">
         <div class="container">
-            <a class="navbar-brand text-capitalize" href="../../rentalmobil/">SIANTAR</a>
+            <a class="navbar-brand text-capitalize" href="./">SIANTAR</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse d-lg-flex justify-content-end navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active text-uppercase" aria-current="page" href="../../rentalmobil/login">Login<span class="visually-hidden"></span></a>
+                        <a class="nav-link active text-uppercase" aria-current="page" href="./login">Login<span class="visually-hidden"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-uppercase" aria-current="page" href="../../rentalmobil/register">Daftar<span class="visually-hidden"></span></a>
+                        <a class="nav-link active text-uppercase" aria-current="page" href=".register">Daftar<span class="visually-hidden"></span></a>
                     </li>
                 </ul>
             </div>

@@ -1,6 +1,16 @@
 <?php
 require_once "./bin/config.php";
-$page       = "tujuan";
+require_once "./bin/query.php";
+
+$page           = "tujuan";
+$id_pelanggan   = "";
+
+if (isset($_GET['setPelanggan'])) {
+    $id_pelanggan = $_GET['id_pelanggan'];
+    $sql        = "SELECT * FROM pelanggan";
+    $query      = mysqli_query($connection, $sql);
+    $result     = mysqli_fetch_array($query);
+}
 ?>
 
 <!DOCTYPE html>
@@ -11,9 +21,6 @@ $page       = "tujuan";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $title ?>Tujuan</title>
-    <style>
-        @import "./scss/_utilities.scss";
-    </style>
 
     <!-- BS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -36,7 +43,7 @@ $page       = "tujuan";
         <h4 class="mt-5 mb-3">Silahkan lengkapi alamat tujuan pelanggan <span class="text-danger fw-bold">*</span></h4>
         <div class="col-lg-6 mb-3">
             <label for="inputCity" class="form-label">Kota Asal <span class="text-danger fw-bold">*</span></label>
-            <input type="text" class="form-control" id="inputCity" required>
+            <input type="text" class="form-control" id="inputCity" required value="<?php echo $kota_asal ?>">
         </div>
         <div class="col-lg-6 mb-3">
             <label for="inputCity" class="form-label">Kota Tujuan <span class="text-danger fw-bold">*</span></label>
