@@ -1,16 +1,10 @@
 <?php
 require_once "./bin/config.php";
 require_once "./bin/query.php";
+require_once "./bin/session.php";
+require_once "./bin/function.php";
 
 $page           = "tujuan";
-$id_pelanggan   = "";
-
-if (isset($_GET['setPelanggan'])) {
-    $id_pelanggan = $_GET['id_pelanggan'];
-    $sql        = "SELECT * FROM pelanggan";
-    $query      = mysqli_query($connection, $sql);
-    $result     = mysqli_fetch_array($query);
-}
 ?>
 
 <!DOCTYPE html>
@@ -40,40 +34,51 @@ if (isset($_GET['setPelanggan'])) {
 
     <div class="container my-5 min-vh-60">
         <?php include_once "./components/breadcump.php" ?>
-        <h4 class="mt-5 mb-3">Silahkan lengkapi alamat tujuan pelanggan <span class="text-danger fw-bold">*</span></h4>
-        <div class="col-lg-6 mb-3">d
-            <label for="inputCity" class="form-label">Kota Asal <span class="text-danger fw-bold">*</span></label>
-            <input type="text" class="form-control" id="inputCity" required value="<?php echo $kota_asal ?>">
-        </div>
-        <div class="col-lg-6 mb-3">
-            <label for="inputCity" class="form-label">Kota Tujuan <span class="text-danger fw-bold">*</span></label>
-            <input type="text" class="form-control" id="inputCity" required>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 mb-3">
-                <label for="inputCity" class="form-label">Jarak Tempuh <span class="text-danger fw-bold">*</span></label>
-                <input type="text" class="form-control" id="inputCity" required>
+        <h4 class="mt-5 mb-3">Silahkan lengkapi alamat tujuan pelanggan <span class="text-danger fw-bold">*</span><?php echo $nama_depan ?></h4>
+        <form action="pembayaran" method="POST">
+            <div class="col-lg-6 mb-3">
+                <?php
+                $sql                = "SELECT * FROM pelanggan WHERE id_pelanggan = '$id_pelanggan'";
+                $query              = mysqli_query($connection, $sql);
+                while ($result      = mysqli_fetch_array($query)) {
+                    $kota_asal      = $result['kota_asal'];
+                ?>
+                    <label for="inputCity" class="form-label">Kota Asal <span class="text-danger fw-bold">*</span></label>
+                    <input type="text" class="form-control text-uppercase" id="inputCity" required value="<?php echo $kota_asal ?>" disabled>
+                <?php
+                }
+                ?>
             </div>
-            <div class="col-lg-3 mb-3">
-                <label for="inputCity" class="form-label">Harga Tarif <span class="text-danger fw-bold">*</span></label>
-                <input type="text" class="form-control" id="inputCity" required>
+            <div class="col-lg-6 mb-3">
+                <label for="inputCity" class="form-label">Kota Tujuan <span class="text-danger fw-bold">*</span></label>
+                <input type="text" class="form-control text-uppercase" id="inputCity" required autocomplete="off" autofocus placeholder="Masukkan Kota Tujuan">
             </div>
-        </div>
-        <div class="col-lg-6 mb-3">
-            <label for="inputZip" class="form-label">Hari Keberangkatan <span class="text-danger fw-bold">*</span></label>
-            <select id="jenkel" name="jenkel" class="form-select" required>
-                <option selected disabled value="">- Pilih Hari</option>
-                <option value="Laki-laki" <?php if ($jenkel == "Laki-laki") echo "selected" ?>>Laki-laki</option>
-                <option value="Perempuan" <?php if ($jenkel == "Perempuan") echo "selected" ?>>Perempuan</option>
-            </select>
-        </div>
-        <div class="col-lg-6 mb-3">
-            <label for="inputZip" class="form-label">Jam Keberangkatan <span class="text-danger fw-bold">*</span></label>
-            <input type="time" class="form-control" id="inputZip" required>
-        </div>
-        <div class="col-lg-6 mb-3">
-            <input type="submit" value="Simpan" class="btn btn-success col-lg-12 col-12 text-uppercase">
-        </div>
+            <div class="row">
+                <div class="col-lg-3 mb-3">
+                    <label for="inputCity" class="form-label">Jarak Tempuh <span class="text-danger fw-bold">*</span></label>
+                    <input type="text" class="form-control text-uppercase" id="inputCity" required disabled>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <label for="inputCity" class="form-label">Harga Tarif <span class="text-danger fw-bold">*</span></label>
+                    <input type="text" class="form-control text-uppercase" id="inputCity" required disabled value="<?php echo $tarif ?>">
+                </div>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <label for="inputZip" class="form-label">Hari Keberangkatan <span class="text-danger fw-bold">*</span></label>
+                <select id="jenkel" name="jenkel" class="form-select text-uppercase" required>
+                    <option selected disabled value="">- Pilih Hari</option>
+                    <option value="Laki-laki" <?php if ($jenkel == "Laki-laki") echo "selected" ?>>Laki-laki</option>
+                    <option value="Perempuan" <?php if ($jenkel == "Perempuan") echo "selected" ?>>Perempuan</option>
+                </select>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <label for="inputZip" class="form-label">Jam Keberangkatan <span class="text-danger fw-bold">*</span></label>
+                <input type="time" class="form-control text-uppercase" id="inputZip" required>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <input type="submit" value="Simpan" class="btn btn-success col-lg-12 col-12 text-uppercase">
+            </div>
+        </form>
     </div>
 
     <!-- start footer -->

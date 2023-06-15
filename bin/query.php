@@ -1,9 +1,20 @@
 <?php
+require_once "./bin/field.php";
 
-$jenkel         = "";
-$success        = "";
-$error          = "";
-$id_pelanggan   = "";
+// untuk get user
+if (isset($_GET['login'])) {
+    $id_user    = $_GET['id_user'];
+    $sql        = "SELECT * FROM user";
+    $query      = mysqli_query($connection, $sql);
+    $result     = mysqli_fetch_array($query);
+}
+
+// untuk get pelanggan
+if (isset($_GET['id_pelanggan'])) {
+    $id_pelanggan   = $_GET['id_pelanggan'];
+} else {
+    $id_pelanggan   = "ID Tidak Ada";
+}
 
 // untuk create pelanggan
 if (isset($_POST['setPelanggan'])) {

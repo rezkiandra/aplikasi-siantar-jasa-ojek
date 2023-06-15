@@ -44,21 +44,21 @@ $page           = "login";
                                 <?php echo $success ?>
                             </div>
                         <?php
-                            header("refresh:2; url=pelanggan");
+                            header("refresh:3; url=pelanggan");
                         } elseif ($error) {
                         ?>
                             <div class="alert alert-danger" role="alert">
                                 <?php echo $error ?>
                             </div>
                         <?php
-                            header("refresh:2; url=login");
+                            header("refresh:3; url=login");
                         }
                         ?>
                     </div>
-                    <form action="" method="post">
+                    <form action="" method="POST">
                         <div class="mb-3">
                             <label for="username" class="form-label">Username</label>
-                            <input type="text" class="form-control bg-light" name="username" id="username" placeholder="Masukkan username" required autocomplete="off">
+                            <input type="text" class="form-control bg-light" name="username" id="username" placeholder="Masukkan username" required autocomplete="off" autofocus>
                         </div>
                         <div class="mb-1">
                             <label for="password" class="form-label">Password</label>
@@ -70,7 +70,7 @@ $page           = "login";
                                 <label for="formCheck" class="form-check-label text-secondary"><small>Ingat saya</small></label>
                             </div>
                             <div class="forgot">
-                                <small>Tidak memiliki akun? <a href="../rentalmobil/register">Register</a></small>
+                                <small>Tidak memiliki akun? <a href="./register">Register</a></small>
                             </div>
                         </div>
                         <div class="input-group mb-3">

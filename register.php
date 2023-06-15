@@ -45,14 +45,14 @@ $page           = "register";
                                 <?php echo $success ?>
                             </div>
                         <?php
-                            header("refresh:2; url=login");
+                            header("refresh:3; url=login");
                         }
                         ?>
                     </div>
                     <form action="" method="post">
                         <div class="mb-3">
                             <label for="username" class="form-label">Username</label>
-                            <input type="text" class="form-control bg-light" name="username" id="username" placeholder="Masukkan username" autocomplete="off">
+                            <input type="text" class="form-control bg-light" name="username" id="username" placeholder="Masukkan username" autocomplete="off" autofocus>
                         </div>
                         <div class="mb-1">
                             <label for="password" class="form-label">Password</label>
@@ -60,11 +60,9 @@ $page           = "register";
                         </div>
                         <div class="mb-5 d-flex justify-content-between">
                             <div class="form-check">
-                                <!-- <input type="checkbox" class="form-check-input" id="formCheck">
-                                <label for="formCheck" class="form-check-label text-secondary"><small>Ingat saya</small></label> -->
                             </div>
                             <div class="forgot">
-                                <small>Sudah memiliki akun? <a href="../rentalmobil/login">Login</a></small>
+                                <small>Sudah memiliki akun? <a href="./login">Login</a></small>
                             </div>
                         </div>
                         <div class="input-group mb-3">

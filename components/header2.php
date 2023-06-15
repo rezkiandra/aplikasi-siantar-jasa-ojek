@@ -1,5 +1,8 @@
 <?php
 require_once "./bin/config.php";
+require_once "./bin/query.php";
+require_once "./bin/field.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -52,24 +55,12 @@ require_once "./bin/config.php";
                         ?>
                     </li> -->
                     <li class="nav-item dropdown">
-                        <!-- <?php
-                                $sql            = "SELECT * FROM user WHERE id_user = '$id_user'";
-                                $query          = mysqli_query($connection, $sql);
-                                while ($q       = mysqli_fetch_array($query)) {
-                                    $username   = $q['username'];
-                                ?>
-                            <a class="nav-link active dropdown-toggle text-uppercase" data-bs-toggle="dropdown" aria-current="page">
-                                <i class="bi bi-people me-2"></i><?php echo $username ?><span class="visually-hidden"></span>
-                            </a>
-                        <?php
-                                }
-                        ?> -->
                         <a class="nav-link active dropdown-toggle text-uppercase" data-bs-toggle="dropdown" aria-current="page">
-                            <i class="bi bi-people me-2"></i>Akun<span class="visually-hidden"></span>
+                            <i class="bi bi-people me-2"></i><?php echo $username ?><span class="visually-hidden"></span>
                         </a>
                         <ul class="dropdown-menu bg-outline-dark">
                             <li>
-                                <a class="dropdown-item" href="./logout" onclick="return confirm('Apakah yakin ingin logout?')">Logout</a>
+                                <a class="dropdown-item text-uppercase" href="./logout" onclick="return confirm('Apakah anda yakin ingin logout?')">Logout</a>
                             </li>
                         </ul>
                     </li>
