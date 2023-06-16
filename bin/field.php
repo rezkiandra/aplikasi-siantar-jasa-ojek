@@ -1,6 +1,7 @@
 <?php
 
 // field user
+$id_user            = "";
 $username           = "";
 $password           = "";
 

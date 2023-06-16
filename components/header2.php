@@ -1,7 +1,6 @@
 <?php
 require_once "./bin/config.php";
 require_once "./bin/query.php";
-require_once "./bin/field.php";
 
 ?>
 
@@ -56,7 +55,7 @@ require_once "./bin/field.php";
                     </li> -->
                     <li class="nav-item dropdown">
                         <a class="nav-link active dropdown-toggle text-uppercase" data-bs-toggle="dropdown" aria-current="page">
-                            <i class="bi bi-people me-2"></i><?php echo $username ?><span class="visually-hidden"></span>
+                            <i class="bi bi-people me-2"></i>Akun<span class="visually-hidden"></span>
                         </a>
                         <ul class="dropdown-menu bg-outline-dark">
                             <li>

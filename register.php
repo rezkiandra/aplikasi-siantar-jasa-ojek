@@ -52,11 +52,11 @@ $page           = "register";
                     <form action="" method="post">
                         <div class="mb-3">
                             <label for="username" class="form-label">Username</label>
-                            <input type="text" class="form-control bg-light" name="username" id="username" placeholder="Masukkan username" autocomplete="off" autofocus>
+                            <input type="text" class="form-control bg-light" name="username" id="username" placeholder="Masukkan username" autocomplete="off" autofocus required>
                         </div>
                         <div class="mb-1">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control bg-light" name="password" id="password" placeholder="Masukkan password" autocomplete="off">
+                            <input type="password" class="form-control bg-light" name="password" id="password" placeholder="Masukkan password" autocomplete="off" required>
                         </div>
                         <div class="mb-5 d-flex justify-content-between">
                             <div class="form-check">

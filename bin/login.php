@@ -1,5 +1,11 @@
 <?php
 
+if (isset($_GET['login'])) {
+    $id_user    = $_GET['id_user'];
+} else {
+    $id_user    = "";
+}
+
 // function login
 session_start();
 if (isset($_COOKIE['cookie_username'])) {

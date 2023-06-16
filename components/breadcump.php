@@ -30,13 +30,6 @@ require_once "./bin/query.php";
                 <?php
                 if (empty($_GET['id_pelanggan'])) {
                 ?>
-                    <a href="./pelanggan" class="text-uppercase <?php if ($page == "pelanggan") {
-                                                                    echo "text-dark text-decoration-none";
-                                                                } ?>"><i class="bi bi-people-fill me-2"></i>Pelanggan
-                    </a>
-                <?php
-                } else {
-                ?>
                     <a href="./pelanggan?id_pelanggan=<?php echo $id_pelanggan ?>" class="text-uppercase <?php if ($page == "pelanggan") {
                                                                                                                 echo "text-dark text-decoration-none";
                                                                                                             } ?>"><i class="bi bi-people-fill me-2"></i>Pelanggan
@@ -68,9 +61,9 @@ require_once "./bin/query.php";
                 <?php
                 if (empty($_GET['id_pelanggan'])) {
                 ?>
-                    <a href="./pembayaran" class="text-uppercase <?php if ($page == "pembayaran") {
-                                                                        echo "text-dark text-decoration-none";
-                                                                    } ?>"><i class="bi bi-wallet-fill me-2"></i>Pembayaran
+                    <a href="./pembayaran?id_pelanggan=<?php echo $id_pelanggan ?>&id_tujuan=<?php echo $id_tujuan ?>" class="text-uppercase <?php if ($page == "pembayaran") {
+                                                                                                                                                    echo "text-dark text-decoration-none";
+                                                                                                                                                } ?>"><i class="bi bi-wallet-fill me-2"></i>Pembayaran
                     </a>
                 <?php
                 } else {
@@ -83,25 +76,9 @@ require_once "./bin/query.php";
                 }
                 ?>
             </li>
-            <li class="breadcrumb-item">
-                <?php
-                if (empty($_GET['id_pelanggan'])) {
-                ?>
-                    <a href="./status" class="text-uppercase <?php if ($page == "status") {
-                                                                    echo "text-dark text-decoration-none";
-                                                                } ?>"><i class="bi bi-clipboard-check-fill me-2"></i>Status
-                    </a>
-                <?php
-                } else {
-                ?>
-                    <a href="./status?id_pelanggan=<?php echo $id_pelanggan ?>&id_tujuan=<?php echo $id_tujuan ?>&id_pembayaran=<?php echo $id_pembayaran ?>" class="text-uppercase <?php if ($page == "status") {
-                                                                                                                                                                                        echo "text-dark text-decoration-none";
-                                                                                                                                                                                    } ?>"><i class="bi bi-clipboard-check-fill me-2"></i>Status
-                    </a>
-                <?php
-                }
-                ?>
-            </li>
+            <li class="breadcrumb-item"><a href="./status?id_pelanggan=<?php echo $id_pelanggan ?>&id_tujuan=<?php echo $id_tujuan ?>&id_pembayaran=<?php echo $id_pembayaran ?>" class="text-uppercase <?php if ($page == "status") {
+                                                                                                                                                                                                            echo "text-dark text-decoration-none";
+                                                                                                                                                                                                        } ?>"><i class="bi bi-clipboard-check-fill me-2"></i>Status</a></li>
         </ol>
     </nav>
 </body>
