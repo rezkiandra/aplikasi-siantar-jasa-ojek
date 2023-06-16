@@ -13,7 +13,7 @@ if (isset($_GET['login'])) {
 if (isset($_GET['id_pelanggan'])) {
     $id_pelanggan   = $_GET['id_pelanggan'];
 } else {
-    $id_pelanggan   = "ID Tidak Ada";
+    $id_pelanggan   = "";
 }
 
 // untuk create pelanggan

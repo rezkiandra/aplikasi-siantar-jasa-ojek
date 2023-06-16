@@ -24,7 +24,8 @@ $page       = "pelanggan";
 
     <div class="container my-5 min-vh-60">
         <?php include_once "./components/breadcump.php" ?>
-        <h4 class="mt-5 mb-3"><?php if (isset($_GET['id_pelanggan'])) {
+        <h4 class="mt-5 mb-3"><?php if (isset($_GET['id_pelanggan']) && empty(!$_GET['id_pelanggan'])) {
+                                    $id_pelanggan   = $_GET['id_pelanggan'];
                                     echo "Data diri pelanggan sudah lengkap terisi ";
                                 } else {
                                     echo "Silahkan lengkapi data diri pelanggan ";
@@ -42,6 +43,23 @@ $page       = "pelanggan";
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-fingerprint"></i></span>
                             <input type="text" name="nama_depan" class="form-control text-uppercase" id="nama_depan" required autocomplete="off" autofocus placeholder="Masukkan Nama Depan" value="<?php echo $nama_depan ?>" disabled>
+                        </div>
+                    <?php
+                    }
+                    if (isset($_GET['id_pelanggan'])) {
+                    ?>
+                        <label for="nama_depan" class="form-label">Nama Depan <span class="text-danger fw-bold">*</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-fingerprint"></i></span>
+                            <input type="text" name="nama_depan" class="form-control text-uppercase" id="nama_depan" required autocomplete="off" autofocus placeholder="Masukkan Nama Depan">
+                        </div>
+                    <?php
+                    } else {
+                    ?>
+                        <label for="nama_depan" class="form-label">Nama Depan <span class="text-danger fw-bold">*</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-fingerprint"></i></span>
+                            <input type="text" name="nama_depan" class="form-control text-uppercase" id="nama_depan" required autocomplete="off" autofocus placeholder="Masukkan Nama Depan">
                         </div>
                     <?php
                     }
