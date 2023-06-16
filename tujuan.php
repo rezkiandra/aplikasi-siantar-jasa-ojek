@@ -34,7 +34,7 @@ $page           = "tujuan";
 
     <div class="container my-5 min-vh-60">
         <?php include_once "./components/breadcump.php" ?>
-        <h4 class="mt-5 mb-3">Silahkan lengkapi alamat tujuan pelanggan <span class="text-danger fw-bold">*</span><?php echo $nama_depan ?></h4>
+        <h4 class="mt-5 mb-3">Silahkan lengkapi tujuanmu <?php echo $nama_depan ?> <span class="text-danger fw-bold">*</span></h4>
         <form action="pembayaran" method="POST">
             <div class="col-lg-6 mb-3">
                 <?php
@@ -47,6 +47,12 @@ $page           = "tujuan";
                     <input type="text" class="form-control text-uppercase" id="inputCity" required value="<?php echo $kota_asal ?>" disabled>
                 <?php
                 }
+                if (empty($_GET['id_pelanggan'])) {
+                ?>
+                    <label for="inputCity" class="form-label">Kota Asal <span class="text-danger fw-bold">*</span></label>
+                    <input type="text" class="form-control text-uppercase" id="inputCity" required value="<?php echo $kota_asal ?>" disabled>
+                <?php
+                }
                 ?>
             </div>
             <div class="col-lg-6 mb-3">
@@ -54,14 +60,36 @@ $page           = "tujuan";
                 <input type="text" class="form-control text-uppercase" id="inputCity" required autocomplete="off" autofocus placeholder="Masukkan Kota Tujuan">
             </div>
             <div class="row">
-                <div class="col-lg-3 mb-3">
-                    <label for="inputCity" class="form-label">Jarak Tempuh <span class="text-danger fw-bold">*</span></label>
-                    <input type="text" class="form-control text-uppercase" id="inputCity" required disabled>
-                </div>
-                <div class="col-lg-3 mb-3">
-                    <label for="inputCity" class="form-label">Harga Tarif <span class="text-danger fw-bold">*</span></label>
-                    <input type="text" class="form-control text-uppercase" id="inputCity" required disabled value="<?php echo $tarif ?>">
-                </div>
+                <?php
+                $sql                = "SELECT * FROM pelanggan WHERE id_pelanggan = '$id_pelanggan'";
+                $query              = mysqli_query($connection, $sql);
+                while ($result      = mysqli_fetch_array($query)) {
+                    $kota_asal      = $result['kota_asal'];
+                ?>
+                    <div class="col-lg-3 mb-3">
+                        <label for="inputCity" class="form-label">Jarak Tempuh <span class="text-danger fw-bold">*</span></label>
+                        <input type="text" class="form-control text-uppercase" id="inputCity" required disabled>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <label for="inputCity" class="form-label">Harga Tarif <span class="text-danger fw-bold">*</span></label>
+                        <input type="text" class="form-control text-uppercase" id="inputCity" required disabled value="<?php echo $harga_tarif ?>">
+                    </div>
+                <?php
+                }
+                if (empty($_GET['id_pelanggan'])) {
+                ?>
+                    <div class="col-lg-3 mb-3">
+                        <label for="inputCity" class="form-label">Jarak Tempuh <span class="text-danger fw-bold">*</span></label>
+                        <input type="text" class="form-control text-uppercase" id="inputCity" required disabled>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <label for="inputCity" class="form-label">Harga Tarif <span class="text-danger fw-bold">*</span></label>
+                        <input type="text" class="form-control text-uppercase" id="inputCity" required disabled value="<?php echo $harga_tarif ?>">
+                    </div>
+                <?php
+                }
+                ?>
+
             </div>
             <div class="col-lg-6 mb-3">
                 <label for="inputZip" class="form-label">Hari Keberangkatan <span class="text-danger fw-bold">*</span></label>

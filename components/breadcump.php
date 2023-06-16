@@ -28,7 +28,14 @@ require_once "./bin/query.php";
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <?php
-                if (empty($_GET['id_pelanggan'])) {
+                if (isset($_GET['id_pelanggan'])) {
+                ?>
+                    <a href="./pelanggan?id_pelanggan=<?php echo $id_pelanggan ?>" class="text-uppercase <?php if ($page == "pelanggan") {
+                                                                                                                echo "text-dark text-decoration-none";
+                                                                                                            } ?>"><i class="bi bi-people-fill me-2"></i>Pelanggan
+                    </a>
+                <?php
+                } else {
                 ?>
                     <a href="./pelanggan?id_pelanggan=<?php echo $id_pelanggan ?>" class="text-uppercase <?php if ($page == "pelanggan") {
                                                                                                                 echo "text-dark text-decoration-none";

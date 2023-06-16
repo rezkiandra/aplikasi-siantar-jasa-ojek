@@ -27,7 +27,7 @@ $page       = "pembayaran";
 
         <h4 class="mt-5 mb-3">Silahkan lengkapi metode pembayaran untuk transaksi <span class="text-danger fw-bold">*</span></h4>
         <div class="col-lg-8 mb-3">
-            <label for="inputEmail4" class="form-label">Nama Lengkap Pelanggan <span class="text-danger fw-bold">*</span></label>
+            <label for="inputEmail4" class="form-label">Nama Pelanggan <span class="text-danger fw-bold">*</span></label>
             <input type="text" class="form-control" id="inputEmail4" required>
         </div>
         <div class="row">

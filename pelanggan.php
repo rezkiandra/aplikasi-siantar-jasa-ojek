@@ -30,7 +30,7 @@ $page       = "pelanggan";
                                 } else {
                                     echo "Silahkan lengkapi data diri pelanggan ";
                                 } ?><span class="text-danger fw-bold">*</span></h4>
-        <form action="tujuan" method="POST">
+        <form action="tujuan?id_pelanggan=<?php echo $id_pelanggan ?>" method="POST">
             <div class="">
                 <div class="col-lg-6 mb-3">
                     <?php
@@ -106,7 +106,7 @@ $page       = "pelanggan";
                     <label for="jenkel" class="form-label">Jenis Kelamin <span class="text-danger fw-bold">*</span></label>
                     <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-gender-ambiguous"></i></span>
-                        <select id="jenkel" name="jenkel" class="form-select text-uppercase" required value="<?php echo $jenkel ?>">
+                        <select id="jenkel" name="jenkel" class="form-select text-uppercase" required>
                             <option selected disabled class="text-uppercase">PILIH JENIS KELAMIN</option>
                             <option value="Laki-Laki" <?php if ($jenkel == "Laki-Laki") echo "selected" ?>>Laki-Laki</option>
                             <option value="Perempuan" <?php if ($jenkel == "Perempuan") echo "selected" ?>>Perempuan</option>
