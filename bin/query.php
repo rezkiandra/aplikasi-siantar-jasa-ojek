@@ -5,7 +5,7 @@ require_once "./bin/field.php";
 $id_user = isset($_GET['login']) ? $_GET['id_user'] : "";
 
 // untuk get pelanggan
-$id_pelanggan = isset($_GET['id_pelanggan']) ? $_GET['id_pelanggan'] : "";
+$nama_depan = isset($_GET['nama_depan']) ? $_GET['nama_depan'] : "";
 
 // untuk create pelanggan
 if (isset($_POST['setPelanggan'])) {
